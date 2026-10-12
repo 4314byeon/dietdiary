@@ -64,8 +64,17 @@ public final class MainActivity extends Activity {
         settings.setAllowUniversalAccessFromFileURLs(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         settings.setMediaPlaybackRequiresUserGesture(true);
+        WebViewAssetLoader.AssetsPathHandler assets=new WebViewAssetLoader.AssetsPathHandler(this);
         WebViewAssetLoader loader=new WebViewAssetLoader.Builder()
-            .addPathHandler("/assets/",new WebViewAssetLoader.AssetsPathHandler(this)).build();
+            .addPathHandler("/assets/",path->{
+                // Older Android MIME tables do not always recognize .mjs.
+                // JavaScript modules require an explicit JavaScript MIME type.
+                if(path.startsWith("www/")&&!path.contains("..")&&path.endsWith(".mjs")){
+                    try{return new WebResourceResponse("text/javascript","UTF-8",getAssets().open(path));}
+                    catch(Exception ignored){return new WebResourceResponse("text/plain","UTF-8",404,"Not Found",Collections.emptyMap(),new ByteArrayInputStream(new byte[0]));}
+                }
+                return assets.handle(path);
+            }).build();
         web.setWebViewClient(new WebViewClientCompat(){
             @Override public WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest request){
                 WebResourceResponse response=loader.shouldInterceptRequest(request.getUrl());

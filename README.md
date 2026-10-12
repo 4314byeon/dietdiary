@@ -6,7 +6,7 @@
 
 ## Android 설치
 
-저장소 **Releases → v0.1.0 → saebom-dietdiary-v0.1.0.apk**를 내려받아 설치합니다. 저장소가 비공개이므로 접근 권한이 있는 GitHub 계정으로 로그인해야 합니다.
+저장소 **Releases → v0.1.1 → saebom-dietdiary-v0.1.1.apk**를 내려받아 설치합니다. 저장소가 비공개이므로 접근 권한이 있는 GitHub 계정으로 로그인해야 합니다.
 
 - Android 8.0 이상, 최신 Android System WebView 권장.
 - 화면과 코드가 APK 안에 포함되어 PC 서버나 인터넷 연결 없이 실행됩니다.
