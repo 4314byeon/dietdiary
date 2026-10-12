@@ -6,7 +6,9 @@
 
 ## Android 설치
 
-저장소 **Releases → v0.1.1 → saebom-dietdiary-v0.1.1.apk**를 내려받아 설치합니다. 저장소가 비공개이므로 접근 권한이 있는 GitHub 계정으로 로그인해야 합니다.
+[Android APK 다운로드](https://github.com/4314byeon/dietdiary/releases/download/v0.1.1/saebom-dietdiary-v0.1.1.apk) · [배포 안내](https://github.com/4314byeon/dietdiary/releases/tag/v0.1.1)
+
+휴대폰 브라우저에서 APK를 내려받은 뒤, **내 파일 → 다운로드**에서 파일을 눌러 설치합니다. GitHub 로그인 없이 다운로드할 수 있습니다.
 
 - Android 8.0 이상, 최신 Android System WebView 권장.
 - 화면과 코드가 APK 안에 포함되어 PC 서버나 인터넷 연결 없이 실행됩니다.
@@ -42,7 +44,7 @@ npm start
 npm run build
 ```
 
-웹 배포용 `dist/`와 Android 오프라인 자산을 생성합니다. 이 저장소는 비공개이며 공개 웹사이트로 자동 배포하지 않습니다.
+웹 배포용 `dist/`와 Android 오프라인 자산을 생성합니다. 소스와 Android APK는 공개되어 있으며, 공개 웹사이트 자동 배포는 설정하지 않았습니다.
 
 ## Android 빌드
 
