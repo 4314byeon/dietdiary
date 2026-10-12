@@ -1,0 +1,14 @@
+# v0.1.0 검증 기록
+
+2026-10-12
+
+- 웹 모델 자동 테스트 34개 통과.
+- Android `assembleRelease lintRelease` 성공. lint 오류 0개, 경고 14개(고정 세로 방향, JavaScript 사용, 의존성 업데이트 안내, 호환성 API 및 아이콘 안내 등). JavaScript는 번들에 포함된 로컬 앱 코드에만 사용하고 외부 콘텐츠를 WebView에 로드하지 않습니다.
+- APK v2 서명 검증 통과. 패키지 `com.saebom.dietdiary`, 버전 0.1.0 / versionCode 1, Android 8.0 이상.
+- APK 안의 오프라인 웹 자산이 검사한 원본 파일과 바이트 단위로 일치함을 확인.
+- APK의 인터넷·카메라·위치·연락처·저장소 전체 접근 권한 없음. AndroidX 내부용 자체 signature 권한만 선언됨.
+- 브라우저에서 첫 실행, 샘플 진입, 체중 저장 및 JSON 백업 다운로드 확인. 브라우저 새 실행 오류 없음.
+- 갤럭시 실기기 설치, Android 시스템 파일 선택창 및 제스처 실행은 아직 미검증입니다.
+
+APK SHA-256:
+`137e51aeabb176494fb98833c7274cbc7ccaa6f43d1de6551fb87508ea77728f`
